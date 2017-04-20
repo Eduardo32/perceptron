@@ -1,4 +1,4 @@
-# perceptron
+# Perceptron
 Perceptron em Java
 
 Perceptron implementado em java para atividade avaliativa da disciplina sistemas inteligentes
