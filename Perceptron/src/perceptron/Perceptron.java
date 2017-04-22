@@ -3,34 +3,34 @@ package perceptron;
 
 public class Perceptron {
 
-    // pesos sinápticos [0] entrada 1, [1] entrada 2, [3]BIAS
+    // Arranjo para guardar os pesos: [0] entrada 1, [1] entrada 2, [3]BIAS
     private final double[] w = new double[3];
 
-    // variável responsável pelo somatório(rede).
+    // Variável responsável pelo somatório(rede).
     private double NET = 0;
 
-    // variavél responsável pelo número máximo de épocas
+    // Variavél responsável pelo número máximo de épocas
     private final int epocasMax = 30;
 
-    // variável responsável pela contagem das épocas durante o treinamento
+    // Variável responsável pela contagem das épocas durante o treinamento
     private int count = 0;
 
-    // declara o vetor da matriz de aprendizado
+    // Declara o vetor da matriz de aprendizado
     private int[][] matrizAprendizado = new int[4][3];
 
     // MÉTODO DE RETORNO DO CONTADOR
     public int getCount(){
         return this.count;
     }
-
+    
+    // Método de retorno dos pesos
     public double[] getW() {
         return w;
     }
     
-    // metodo de inicialização inicia o vetor da matriz de aprendizado
+    // metodo de inicialização dos pesos
     public Perceptron(double w0, double w1, double w2) {
         
-        // Peso sináptico para primeira entrada.
         w[0] = w0;
         // Peso sináptico para segunda entrada.
         w[1] = w1;
@@ -38,10 +38,9 @@ public class Perceptron {
         w[2]= w2;
     }
     
+    // metodo de inicialização inicia o vetor da matriz de aprendizado
     public Perceptron(int[][] matrizAprendizado){
         this.matrizAprendizado = matrizAprendizado;
-        
-        // inicialização dos pesos sinápticos
 
         // Peso sináptico para primeira entrada.
         w[0] = 0;
